@@ -29,13 +29,12 @@ const SigninForm = ({ switchAuthState }) => {
       setIsLoginRequest(true);
   
       const { response, err } = await userApi.signin(values);
-      console.log("Signin Response:", response); // Log the response here
+      console.log("Signin Response:", response); 
       setIsLoginRequest(false);
   
       if (response) {
-        // Save the token to localStorage
         if (response && response.token) {
-          localStorage.setItem("actkn", response.token); // Store the token in localStorage
+          localStorage.setItem("actkn", response.token); 
         } else {
           console.error("No token found in the API response");
         }
