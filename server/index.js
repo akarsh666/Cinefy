@@ -9,7 +9,7 @@ import routes from "./src/routes/index.js"
 const app = express();
 
 app.use(cors({
-  origin: ['https://cinefy-lac.vercel.app'],
+  origin: ['https://cinefy-lac.vercel.app', 'https://cinefy-568s42z9q-akarshs-projects-25cb8a1c.vercel.app'],
   credentials: true,
 }));
 app.use(express.json());
